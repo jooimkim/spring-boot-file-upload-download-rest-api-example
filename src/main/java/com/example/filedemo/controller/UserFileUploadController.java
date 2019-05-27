@@ -7,7 +7,8 @@ import com.example.filedemo.service.StorageEncryptionService;
 import com.example.filedemo.service.UserInfoService;
 import com.example.filedemo.util.AppConstants;
 import com.example.filedemo.util.AppUtil;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.owasp.esapi.ESAPI;
 import org.owasp.esapi.errors.ValidationException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +36,7 @@ import java.util.List;
 
 @Controller
 public class UserFileUploadController {
-	private static final Logger logger = Logger.getLogger(UserFileUploadController.class);
+	private static final Logger logger = LoggerFactory.getLogger(UserFileUploadController.class);
 	@Autowired
 	private UserInfoService userService;
 	@Autowired
